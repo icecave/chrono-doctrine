@@ -16,7 +16,7 @@ class DateTimeTypeTest extends PHPUnit_Framework_TestCase
         $installer = new DoctrineTypeInstaller;
         $installer->installTypes();
 
-        $this->type = Type::getType('chrono-datetime');
+        $this->type = Type::getType('chrono_datetime');
         $this->liberatedType = Liberator::liberate($this->type);
 
         $this->clock = Phake::mock('Icecave\Chrono\Clock\ClockInterface');
@@ -29,7 +29,12 @@ class DateTimeTypeTest extends PHPUnit_Framework_TestCase
 
     public function testGetName()
     {
-        $this->assertSame('chrono-datetime', $this->type->getName());
+        $this->assertSame('chrono_datetime', $this->type->getName());
+    }
+
+    public function testRequiresSQLCommentHint()
+    {
+        $this->assertTrue($this->type->requiresSQLCommentHint($this->platform));
     }
 
     public function testToPhp()

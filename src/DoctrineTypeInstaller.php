@@ -14,12 +14,12 @@ class DoctrineTypeInstaller
     public function installTypes()
     {
         $this->installType(
-            'chrono-date',
+            'chrono_date',
             __NAMESPACE__ . '\DateType'
         );
 
         $this->installType(
-            'chrono-datetime',
+            'chrono_datetime',
             __NAMESPACE__ . '\DateTimeType'
         );
     }
