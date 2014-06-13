@@ -1,7 +1,7 @@
 {
     "name": "icecave/chrono-doctrine",
     "description": "Custom Doctrine types for Chrono dates and times.",
-    "keywords": ["doctrine", "orm", "chrono", "date", "time"],
+    "keywords": ["doctrine", "chrono", "date", "time"],
     "homepage": "https://github.com/IcecaveStudios/chrono-doctrine",
     "license": "MIT",
     "authors": [
