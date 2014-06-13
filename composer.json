@@ -17,6 +17,7 @@
         "icecave/chrono": "~0.4.0"
     },
     "require-dev": {
+        "eloquent/liberator": "~2",
         "icecave/archer": "~1"
     },
     "suggest": {
