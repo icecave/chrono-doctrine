@@ -1,0 +1,30 @@
+{
+    "name": "icecave/chrono-doctrine",
+    "description": "Custom Doctrine types for Chrono dates and times.",
+    "keywords": ["doctrine", "orm", "chrono", "date", "time"],
+    "homepage": "https://github.com/IcecaveStudios/chrono-doctrine",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Harris",
+            "email": "james.harris@icecave.com.au",
+            "homepage": "https://github.com/jmalloc"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "doctrine/dbal": "~2",
+        "icecave/chrono": "~0.4.0"
+    },
+    "require-dev": {
+        "icecave/archer": "~1"
+    },
+    "suggest": {
+        "eloquent/asplode": "Drop-in exception-based error handling."
+    },
+    "autoload": {
+        "psr-4": {
+            "Icecave\\Chrono\\Doctrine\\": "src"
+        }
+    }
+}
