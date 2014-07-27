@@ -13,4 +13,4 @@ library.
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/chrono-doctrine/develop.svg
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/chrono-doctrine/develop.svg
-[SemVer]: http://img.shields.io/:semver-0.0.0-red.svg
+[SemVer]: http://img.shields.io/:semver-0.1.0-yellow.svg
