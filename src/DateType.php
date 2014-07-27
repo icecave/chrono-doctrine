@@ -10,7 +10,7 @@ use Icecave\Chrono\Date;
 use Icecave\Chrono\TimePointInterface;
 
 /**
- * A date type for utilizing Chrono dates.
+ * A type for utilizing Chrono dates.
  */
 class DateType extends BaseDateType
 {
@@ -72,8 +72,7 @@ class DateType extends BaseDateType
     {
         if (null === $value) {
             return null;
-        }
-        if (
+        } elseif (
             !$value instanceof TimePointInterface ||
             $this->clock()->timeZone()->isNotEqualTo($value->timeZone())
         ) {

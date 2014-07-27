@@ -3,16 +3,13 @@ namespace Icecave\Chrono\Doctrine;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
-use Doctrine\DBAL\Types\DateTimeType as BaseDateTimeType;
-use Icecave\Chrono\Clock\ClockInterface;
-use Icecave\Chrono\Clock\SystemClock;
-use Icecave\Chrono\DateTime;
-use Icecave\Chrono\TimePointInterface;
+use Doctrine\DBAL\Types\IntegerType;
+use Icecave\Chrono\TimeSpan\Duration;
 
 /**
- * A type for utilizing Chrono dates.
+ * A type for utilizing Chrono durations.
  */
-class DateTimeType extends BaseDateTimeType
+class DurationType extends IntegerType
 {
     /**
      * Get the name.
@@ -21,7 +18,7 @@ class DateTimeType extends BaseDateTimeType
      */
     public function getName()
     {
-        return 'chrono_datetime';
+        return 'chrono_duration';
     }
 
     /**
@@ -54,9 +51,7 @@ class DateTimeType extends BaseDateTimeType
             return null;
         }
 
-        return DateTime::fromIsoString(
-            $value . $this->clock()->timeZone()->isoString()
-        );
+        return new Duration($value);
     }
 
     /**
@@ -72,32 +67,13 @@ class DateTimeType extends BaseDateTimeType
     {
         if (null === $value) {
             return null;
-        } elseif (
-            !$value instanceof TimePointInterface ||
-            $this->clock()->timeZone()->isNotEqualTo($value->timeZone())
-        ) {
+        } elseif (!$value instanceof Duration) {
             throw ConversionException::conversionFailed(
                 $value,
                 $this->getName()
             );
         }
 
-        return $value->format('Y-m-d H:i:s');
+        return $value->totalSeconds();
     }
-
-    /**
-     * Get the clock.
-     *
-     * @return ClockInterface The clock.
-     */
-    protected function clock()
-    {
-        if (null === $this->clock) {
-            $this->clock = new SystemClock;
-        }
-
-        return $this->clock;
-    }
-
-    private $clock;
 }

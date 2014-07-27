@@ -22,6 +22,16 @@ class DoctrineTypeInstaller
             'chrono_datetime',
             __NAMESPACE__ . '\DateTimeType'
         );
+
+        $this->installType(
+            'chrono_period',
+            __NAMESPACE__ . '\PeriodType'
+        );
+
+        $this->installType(
+            'chrono_duration',
+            __NAMESPACE__ . '\DurationType'
+        );
     }
 
     /**

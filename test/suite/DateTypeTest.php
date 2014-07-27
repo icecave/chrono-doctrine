@@ -6,8 +6,8 @@ use Eloquent\Liberator\Liberator;
 use Icecave\Chrono\Clock\SystemClock;
 use Icecave\Chrono\Date;
 use Icecave\Chrono\TimeZone;
-use PHPUnit_Framework_TestCase;
 use Phake;
+use PHPUnit_Framework_TestCase;
 
 class DateTypeTest extends PHPUnit_Framework_TestCase
 {

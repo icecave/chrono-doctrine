@@ -22,6 +22,8 @@ class DoctrineTypeInstallerTest extends PHPUnit_Framework_TestCase
             array(
                 'chrono_date' => __NAMESPACE__ . '\DateType',
                 'chrono_datetime' => __NAMESPACE__ . '\DateTimeType',
+                'chrono_period' => __NAMESPACE__ . '\PeriodType',
+                'chrono_duration' => __NAMESPACE__ . '\DurationType',
             ),
             Type::getTypesMap()
         );
