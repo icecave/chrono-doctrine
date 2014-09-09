@@ -32,5 +32,10 @@
         "psr-4": {
             "Icecave\\Chrono\\Doctrine\\": "src"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.3.x-dev"
+        }
     }
 }
