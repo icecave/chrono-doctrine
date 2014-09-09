@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3",
         "doctrine/dbal": "~2",
-        "icecave/chrono": "~0.4.0"
+        "icecave/chrono": "~1"
     },
     "require-dev": {
         "eloquent/liberator": "~2",
