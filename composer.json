@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3",
         "doctrine/dbal": "~2",
-        "icecave/chrono": "~0.4.0"
+        "icecave/chrono": "~1"
     },
     "require-dev": {
         "eloquent/liberator": "~2",
@@ -31,6 +31,11 @@
     "autoload": {
         "psr-4": {
             "Icecave\\Chrono\\Doctrine\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.3.x-dev"
         }
     }
 }
