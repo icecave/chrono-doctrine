@@ -11,6 +11,6 @@ library.
 * Read the [API documentation](http://icecavestudios.github.io/chrono-doctrine/artifacts/documentation/api/)
 
 <!-- references -->
-[Build Status]: http://img.shields.io/travis/IcecaveStudios/chrono-doctrine/develop.svg
-[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/chrono-doctrine/develop.svg
-[SemVer]: http://img.shields.io/:semver-0.2.0-yellow.svg
+[Build Status]: http://img.shields.io/travis/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
+[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
+[SemVer]: http://img.shields.io/:semver-0.2.0-yellow.svg?style=flat-square
