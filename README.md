@@ -10,6 +10,11 @@ library.
 * Install via [Composer](http://getcomposer.org) package [icecave/chrono-doctrine](https://packagist.org/packages/icecave/chrono-doctrine)
 * Read the [API documentation](http://icecavestudios.github.io/chrono-doctrine/artifacts/documentation/api/)
 
+## Contact us
+
+* Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
+* Visit the [Icecave Studios website](http://icecave.com.au)
+
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
