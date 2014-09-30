@@ -10,7 +10,7 @@ class PeriodTypeTest extends PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $installer = new DoctrineTypeInstaller;
+        $installer = new DoctrineTypeInstaller();
         $installer->installTypes();
 
         $this->type = Type::getType('chrono_period');

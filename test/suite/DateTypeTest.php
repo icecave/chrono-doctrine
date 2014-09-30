@@ -13,7 +13,7 @@ class DateTypeTest extends PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $installer = new DoctrineTypeInstaller;
+        $installer = new DoctrineTypeInstaller();
         $installer->installTypes();
 
         $this->type = Type::getType('chrono_date');
@@ -72,7 +72,7 @@ class DateTypeTest extends PHPUnit_Framework_TestCase
         $this->liberatedType->clock = null;
         $actual = $this->liberatedType->clock();
 
-        $this->assertEquals(new SystemClock, $actual);
+        $this->assertEquals(new SystemClock(), $actual);
         $this->assertSame($actual, $this->liberatedType->clock());
     }
 }

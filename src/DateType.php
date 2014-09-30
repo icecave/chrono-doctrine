@@ -93,7 +93,7 @@ class DateType extends BaseDateType
     protected function clock()
     {
         if (null === $this->clock) {
-            $this->clock = new SystemClock;
+            $this->clock = new SystemClock();
         }
 
         return $this->clock;
