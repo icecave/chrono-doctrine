@@ -55,10 +55,13 @@ class DateTypeTest extends PHPUnit_Framework_TestCase
         $this->assertNull($this->type->convertToDatabaseValue(null, $this->platform));
     }
 
-    public function testToDatabaseFailureIncorrectTimeZone()
+    public function testToDatabaseConvertTimezone()
     {
-        $this->setExpectedException('Doctrine\DBAL\Types\ConversionException');
-        $this->type->convertToDatabaseValue(Date::fromIsoString('2001-01-01+00:00'), $this->platform);
+        $this->assertSame(
+            '2000-12-31',
+            $this->type->convertToDatabaseValue(Date::fromIsoString('2001-01-01+10:00'), $this->platform)
+        );
+        $this->assertNull($this->type->convertToDatabaseValue(null, $this->platform));
     }
 
     public function testToDatabaseFailureInvalidType()
