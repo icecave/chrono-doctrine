@@ -1,5 +1,9 @@
 # Chrono Doctrine Changelog
 
+### 0.3.0 (2014-11-10)
+
+* **[IMPROVED]** `DateTimeType` and `DateType` now convert date/times outside the system timezone rather than throwing
+
 ### 0.2.0 (2014-09-09)
 
 * Updated to use Chrono v1.0.0
