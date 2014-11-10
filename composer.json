@@ -1,7 +1,12 @@
 {
     "name": "icecave/chrono-doctrine",
     "description": "Custom Doctrine types for Chrono dates and times.",
-    "keywords": ["doctrine", "chrono", "date", "time"],
+    "keywords": [
+        "doctrine",
+        "chrono",
+        "date",
+        "time"
+    ],
     "homepage": "https://github.com/IcecaveStudios/chrono-doctrine",
     "license": "MIT",
     "authors": [
@@ -24,9 +29,6 @@
     "require-dev": {
         "eloquent/liberator": "~2",
         "icecave/archer": "~1"
-    },
-    "suggest": {
-        "eloquent/asplode": "Drop-in exception-based error handling."
     },
     "autoload": {
         "psr-4": {

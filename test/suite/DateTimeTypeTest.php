@@ -13,7 +13,7 @@ class DateTimeTypeTest extends PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $installer = new DoctrineTypeInstaller;
+        $installer = new DoctrineTypeInstaller();
         $installer->installTypes();
 
         $this->type = Type::getType('chrono_datetime');
@@ -55,10 +55,13 @@ class DateTimeTypeTest extends PHPUnit_Framework_TestCase
         $this->assertNull($this->type->convertToDatabaseValue(null, $this->platform));
     }
 
-    public function testToDatabaseFailureIncorrectTimeZone()
+    public function testToDatabaseConvertTimezone()
     {
-        $this->setExpectedException('Doctrine\DBAL\Types\ConversionException');
-        $this->type->convertToDatabaseValue(DateTime::fromIsoString('2001-01-01T01:01:01+00:00'), $this->platform);
+        $this->assertSame(
+            '2000-12-31 10:01:01',
+            $this->type->convertToDatabaseValue(DateTime::fromIsoString('2001-01-01T01:01:01+10:00'), $this->platform)
+        );
+        $this->assertNull($this->type->convertToDatabaseValue(null, $this->platform));
     }
 
     public function testToDatabaseFailureInvalidType()
@@ -72,7 +75,7 @@ class DateTimeTypeTest extends PHPUnit_Framework_TestCase
         $this->liberatedType->clock = null;
         $actual = $this->liberatedType->clock();
 
-        $this->assertEquals(new SystemClock, $actual);
+        $this->assertEquals(new SystemClock(), $actual);
         $this->assertSame($actual, $this->liberatedType->clock());
     }
 }

@@ -9,7 +9,7 @@ class DoctrineTypeInstallerTest extends PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->installer = new DoctrineTypeInstaller;
+        $this->installer = new DoctrineTypeInstaller();
 
         Liberator::liberateClass('Doctrine\DBAL\Types\Type')->_typesMap = array();
     }

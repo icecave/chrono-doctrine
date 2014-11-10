@@ -72,15 +72,16 @@ class DateType extends BaseDateType
     {
         if (null === $value) {
             return null;
-        } elseif (
-            !$value instanceof TimePointInterface ||
-            $this->clock()->timeZone()->isNotEqualTo($value->timeZone())
-        ) {
+        } elseif (!$value instanceof TimePointInterface) {
             throw ConversionException::conversionFailed(
                 $value,
                 $this->getName()
             );
         }
+
+        $value = $value->toTimeZone(
+            $this->clock()->timeZone()
+        );
 
         return $value->format('Y-m-d');
     }
@@ -93,7 +94,7 @@ class DateType extends BaseDateType
     protected function clock()
     {
         if (null === $this->clock) {
-            $this->clock = new SystemClock;
+            $this->clock = new SystemClock();
         }
 
         return $this->clock;
