@@ -21,7 +21,9 @@ class DoctrineTypeInstallerTest extends PHPUnit_Framework_TestCase
         $this->assertSame(
             array(
                 'chrono_date' => __NAMESPACE__ . '\DateType',
+                'chrono_time' => __NAMESPACE__ . '\TimeType',
                 'chrono_datetime' => __NAMESPACE__ . '\DateTimeType',
+                'chrono_timezone' => __NAMESPACE__ . '\TimeZoneType',
                 'chrono_period' => __NAMESPACE__ . '\PeriodType',
                 'chrono_duration' => __NAMESPACE__ . '\DurationType',
             ),

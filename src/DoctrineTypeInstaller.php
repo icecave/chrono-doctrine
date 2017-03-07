@@ -19,8 +19,18 @@ class DoctrineTypeInstaller
         );
 
         $this->installType(
+            'chrono_time',
+            __NAMESPACE__ . '\TimeType'
+        );
+
+        $this->installType(
             'chrono_datetime',
             __NAMESPACE__ . '\DateTimeType'
+        );
+
+        $this->installType(
+            'chrono_timezone',
+            __NAMESPACE__ . '\TimeZoneType'
         );
 
         $this->installType(
