@@ -1,5 +1,9 @@
 # Chrono Doctrine Changelog
 
+### 0.4.1 (2017-03-08)
+
+* **[FIXED]** Fix travis build and publish
+
 ### 0.4.0 (2017-03-08)
 
 * **[IMPROVED]** Add `TimeType` and `TimeZoneType`
