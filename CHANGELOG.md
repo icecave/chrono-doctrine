@@ -1,5 +1,10 @@
 # Chrono Doctrine Changelog
 
+### 0.5.0 (2020-08-27)
+
+- **[BC]** Remove `PackageInfo`
+- Update to use Chrono v2.0.0
+
 ### 0.4.1 (2017-03-08)
 
 - **[FIXED]** Fix travis build and publish
