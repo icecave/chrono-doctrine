@@ -17,7 +17,7 @@ script: phpdbg -qrr vendor/bin/phpunit
 after_script: bash <(curl -s https://codecov.io/bash)
 env:
   global:
-    secure: TODO
+    secure: "eh25ZdxT3BnaSlvRWGcV6pwwKxcHCqlxhMOqMTK2xlhitst8UNg6K1Cq7qA1fgFeV/itfl7lmuZyI6McezmwsfU5ocBGy/pMutF3KIGs+uxqknucNWVGjKiv6HsXxEktTG7pvR/90OAJXFhPQlji+6l0p9At6zBkYL3CnZK3Ei0="
 cache:
   directories:
   - "$HOME/.composer/cache/files"

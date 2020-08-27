@@ -1,22 +1,10 @@
 # Chrono Doctrine
 
-[![Build Status]](https://travis-ci.org/IcecaveStudios/chrono-doctrine)
-[![Test Coverage]](https://coveralls.io/r/IcecaveStudios/chrono-doctrine?branch=develop)
-[![SemVer]](http://semver.org)
+[![Build Status](http://img.shields.io/travis/icecave/chrono-doctrine/master.svg?style=flat-square)](https://travis-ci.org/icecave/chrono-doctrine)
+[![Code Coverage](https://img.shields.io/codecov/c/github/icecave/chrono-doctrine/master.svg?style=flat-square)](https://codecov.io/github/icecave/chrono-doctrine)
+[![Latest Version](http://img.shields.io/packagist/v/icecave/chrono-doctrine.svg?style=flat-square&label=semver)](https://semver.org)
 
-This package provides custom Doctrine data types for the [Chrono](https://github.com/IcecaveStudios/chrono) date/time
+This package provides custom Doctrine data types for the [Chrono](https://github.com/icecave/chrono) date/time
 library.
 
-* Install via [Composer](http://getcomposer.org) package [icecave/chrono-doctrine](https://packagist.org/packages/icecave/chrono-doctrine)
-* Read the [API documentation](http://icecavestudios.github.io/chrono-doctrine/artifacts/documentation/api/)
-
-## Contact us
-
-* Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
-* Visit the [Icecave Studios website](http://icecave.com.au)
-* Join `#icecave` on [irc.freenode.net](http://webchat.freenode.net?channels=icecave)
-
-<!-- references -->
-[Build Status]: http://img.shields.io/travis/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
-[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/chrono-doctrine/develop.svg?style=flat-square
-[SemVer]: http://img.shields.io/:semver-0.4.1-yellow.svg?style=flat-square
+    composer require icecave/chrono-doctrine
