@@ -1,6 +1,6 @@
 # Chrono Doctrine Changelog
 
-### 0.5.0 (2020-08-27)
+### 1.0.0 (2020-08-27)
 
 - **[BC]** Remove `PackageInfo`
 - Update to use Chrono v2.0.0
