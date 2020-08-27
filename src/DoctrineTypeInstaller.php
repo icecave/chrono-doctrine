@@ -13,35 +13,12 @@ class DoctrineTypeInstaller
      */
     public function installTypes()
     {
-        $this->installType(
-            'chrono_date',
-            __NAMESPACE__ . '\DateType'
-        );
-
-        $this->installType(
-            'chrono_time',
-            __NAMESPACE__ . '\TimeType'
-        );
-
-        $this->installType(
-            'chrono_datetime',
-            __NAMESPACE__ . '\DateTimeType'
-        );
-
-        $this->installType(
-            'chrono_timezone',
-            __NAMESPACE__ . '\TimeZoneType'
-        );
-
-        $this->installType(
-            'chrono_period',
-            __NAMESPACE__ . '\PeriodType'
-        );
-
-        $this->installType(
-            'chrono_duration',
-            __NAMESPACE__ . '\DurationType'
-        );
+        $this->installType('chrono_date', DateType::class);
+        $this->installType('chrono_time', TimeType::class);
+        $this->installType('chrono_datetime', DateTimeType::class);
+        $this->installType('chrono_timezone', TimeZoneType::class);
+        $this->installType('chrono_period', PeriodType::class);
+        $this->installType('chrono_duration', DurationType::class);
     }
 
     /**

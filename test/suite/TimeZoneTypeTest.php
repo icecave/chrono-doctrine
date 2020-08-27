@@ -4,11 +4,11 @@ namespace Icecave\Chrono\Doctrine;
 use Doctrine\DBAL\Types\Type;
 use Icecave\Chrono\TimeZone;
 use Phake;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TimeZoneTypeTest extends PHPUnit_Framework_TestCase
+class TimeZoneTypeTest extends TestCase
 {
-    protected function setUp()
+    public function setUp(): void
     {
         $installer = new DoctrineTypeInstaller();
         $installer->installTypes();
@@ -47,7 +47,7 @@ class TimeZoneTypeTest extends PHPUnit_Framework_TestCase
 
     public function testToDatabaseFailureInvalidType()
     {
-        $this->setExpectedException('Doctrine\DBAL\Types\ConversionException');
+        $this->expectException('Doctrine\DBAL\Types\ConversionException');
         $this->type->convertToDatabaseValue('value', $this->platform);
     }
 }

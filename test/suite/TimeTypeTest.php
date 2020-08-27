@@ -7,11 +7,11 @@ use Icecave\Chrono\Clock\SystemClock;
 use Icecave\Chrono\TimeOfDay;
 use Icecave\Chrono\TimeZone;
 use Phake;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TimeTypeTest extends PHPUnit_Framework_TestCase
+class TimeTypeTest extends TestCase
 {
-    protected function setUp()
+    public function setUp(): void
     {
         $installer = new DoctrineTypeInstaller();
         $installer->installTypes();
@@ -66,7 +66,7 @@ class TimeTypeTest extends PHPUnit_Framework_TestCase
 
     public function testToDatabaseFailureInvalidType()
     {
-        $this->setExpectedException('Doctrine\DBAL\Types\ConversionException');
+        $this->expectException('Doctrine\DBAL\Types\ConversionException');
         $this->type->convertToDatabaseValue('value', $this->platform);
     }
 

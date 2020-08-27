@@ -7,7 +7,7 @@
         "date",
         "time"
     ],
-    "homepage": "https://github.com/IcecaveStudios/chrono-doctrine",
+    "homepage": "https://github.com/icecave/chrono-doctrine",
     "license": "MIT",
     "authors": [
         {
@@ -17,27 +17,26 @@
         },
         {
             "name": "James Harris",
-            "email": "james.harris@icecave.com.au",
+            "email": "mailjamesharris@gmail.com",
             "homepage": "https://github.com/jmalloc"
         }
     ],
     "require": {
-        "php": "^7",
-        "doctrine/dbal": "~2",
-        "icecave/chrono": "~1"
+        "php": ">=7.2",
+        "doctrine/dbal": "^2",
+        "icecave/chrono": "^2"
     },
     "require-dev": {
         "eloquent/liberator": "~2",
-        "icecave/archer": "~1"
+        "friendsofphp/php-cs-fixer": "^2",
+        "phake/phake": "^3",
+        "phpunit/phpunit": "^8"
     },
-    "autoload": {
-        "psr-4": {
-            "Icecave\\Chrono\\Doctrine\\": "src"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-develop": "0.4.x-dev"
+    "autoload": { "psr-4": { "Icecave\\Chrono\\Doctrine\\": "src" } },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.2"
         }
     }
 }
